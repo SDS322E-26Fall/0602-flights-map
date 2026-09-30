@@ -55,7 +55,11 @@ knitr::include_graphics("figures/flights-map.png")
 
 How many layers (`geom_*()`) do you think this plot contains? Sketch a general `ggplot2` skeleton you could use to build it.
 
-**Your answer:**
+```{r eval = FALSE}
+# Your answer: write your syntax
+   
+```
+
 
 
 ## Points representing the airports
@@ -64,6 +68,11 @@ What should your airport point data look like to fit the `ggplot2` syntax above?
 
 
 **Your answer:**
+
+
+
+
+
 
 
 Can you implement the above from the `flight_df_raw` data? You may iterate a few times between these two steps. 
@@ -81,6 +90,11 @@ Repeat the same process for the routes. What should your airport point data look
 
 
 **Your answer:**
+
+
+
+
+
 
 
 Now build this route data frame from `flight_df_raw`. Again, you may need to iterate between sketching and coding.
