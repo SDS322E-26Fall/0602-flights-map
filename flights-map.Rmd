@@ -53,16 +53,17 @@ airports
 knitr::include_graphics("figures/flights-map.png")
 ```
 
-How many layers (`geom_*()`) do you think this plot include? Can you write down a general `ggplot2` syntax skeleton that you may use to produce this plot? 
+How many layers (`geom_*()`) do you think this plot contains? Sketch a general `ggplot2` skeleton you could use to build it.
 
-Your answer: .....
+**Your answer:**
 
 
 ## Points representing the airports
 
-How do you think your point data should look like to fit into the ggplot2 syntax you sketched? Can you sketch how the data should look like? 
+What should your airport point data look like to fit the `ggplot2` syntax above? Sketch the data frame you'd want: What does each row represent? Which columns does it need?
 
-Your answer: 
+
+**Your answer:**
 
 
 Can you implement the above from the `flight_df_raw` data? You may iterate a few times between these two steps. 
@@ -76,12 +77,13 @@ nodes_df <- flight_df_raw |>
 
 ## Lines representing the routes
 
-How do you think your route data should look like to fit into the ggplot2 syntax you sketched? Can you sketch how the data should look like? 
-
-Your answer: 
+Repeat the same process for the routes. What should your airport point data look like to fit the `ggplot2` syntax above? Again what does each row represent, and which columns does it need?
 
 
-Can you implement the above from the `flight_df_raw` data? You may iterate a few times between these two steps. 
+**Your answer:**
+
+
+Now build this route data frame from `flight_df_raw`. Again, you may need to iterate between sketching and coding.
 
 ```{r}
 routes_df <- flight_df_raw |>
@@ -89,21 +91,22 @@ routes_df <- flight_df_raw |>
   
 ```
  
-## Final plot - Assemble all the components
+## Final plot - Assembling the components
 
-Now you have the dataset for each component - can you build the final plot?
+With a data frame ready for each layer, put everything together and build the final plot.
 
 ```{r results='hold'}
 
 
 ```
 
-`ggplot2` produces some warning about 
+When you run your code, `ggplot2` may produce warnings like these:
 
 ````
-1: Removed 32 rows containing missing values or values outside the scale range (`geom_point()`). 
-2: Removed 204 rows containing missing values or values outside the scale range (`geom_line()`). 
+1: Removed xxx rows containing missing values or values outside the scale range (`geom_point()`). 
+2: Removed xxx rows containing missing values or values outside the scale range (`geom_line()`). 
 
 ````
 
-This signals something about the missing values. What would you do to suppress these warnings?
+
+These warnings tell you that some rows have missing values, so `ggplot2` dropped them before plotting. Can you investigate into these missingness? 
